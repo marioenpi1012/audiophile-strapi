@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "cartImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "earphones",
+        "headphones",
+        "speakers"
+      ]
+    },
+    "new": {
+      "type": "boolean"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "description": {
+      "type": "text"
+    },
+    "features": {
+      "type": "text"
+    },
+    "includedItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "included-items.included-items"
+    },
+    "others": {
+      "type": "component",
+      "repeatable": true,
+      "component": "others.others"
+    },
+    "gallery": {
+      "type": "component",
+      "repeatable": false,
+      "component": "gallery.gallery"
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "image.image"
+    },
+    "categoryImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "image.image"
+    }
+  }
+}
